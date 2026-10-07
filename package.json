@@ -1,0 +1,14 @@
+{
+  "name": "frontline",
+  "version": "2.0.0",
+  "description": "Линия — штабная игра о сухопутном фронте. Сервер с игровой логикой, сетевая игра и бот.",
+  "private": true,
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

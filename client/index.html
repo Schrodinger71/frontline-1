@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Линия</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="map"></canvas>
+<header id="top">
+  <div class="brand">ЛИНИЯ<small>сухопутный фронт</small></div>
+  <div class="clock" id="hdClock">06:00</div>
+  <div class="kv"><span>Сутки</span><b id="hdDay">1</b></div>
+  <div class="kv"><span>Погода</span><b id="hdWeather">ясно</b></div>
+  <div class="kv"><span>Фронт</span><b id="hdFront">ровно</b></div>
+  <div class="kv"><span>Города</span><b id="hdCities"></b></div>
+  <div class="kv"><span>Силы</span><b id="hdForce"></b></div>
+  <div class="kv"><span>Бюджет</span><b id="hdBudget"></b></div>
+  <div class="kv"><span>Доход</span><b id="hdIncome"></b></div>
+  <div class="kv" id="hdRoomBox" style="display:none"><span>Код</span><b id="hdRoom"></b></div>
+  <div class="sp"></div>
+  <div id="speedBox"></div>
+  <button class="btn" id="btnMenu">Меню</button>
+  <button class="btn" id="btnHelp">?</button>
+</header>
+<aside id="left" class="panel">
+  <div class="colbtn" data-col="left">‹</div>
+  <div class="tabs">
+    <button class="on" data-tab="radio">Эфир</button>
+    <button data-tab="pts">Точки</button>
+  </div>
+  <div class="pc log" id="lc_radio"></div>
+  <div class="pc" id="lc_pts" style="display:none"></div>
+</aside>
+<aside id="right" class="panel">
+  <div class="colbtn" data-col="right">›</div>
+  <div class="tabs">
+    <button class="on" data-tab="ord">Приказ</button>
+    <button data-tab="buy">Закупка</button>
+    <button data-tab="troops">Части</button>
+    <button data-tab="hq">Штабы</button>
+  </div>
+  <div class="pc" id="rc"></div>
+</aside>
+<div id="hintbar"></div>
+<div id="toast"></div>
+<div id="modal" hidden><div class="box" id="mbox"></div></div>
+<div id="menu"></div>
+<div id="deployBar" hidden>
+  <div class="dtitle">Расстановка войск</div>
+  <div class="dtime" id="dpTime">01:15</div>
+  <div class="dhint">Купите части во вкладке «Закупка» и кликните в своей зоне — она выделена на карте.</div>
+  <button class="btn pri" id="btnReady">Готов</button>
+  <div class="dwait" id="dpWait"></div>
+</div>
+<script src="/shared/world.js"></script>
+<script src="js/main.js"></script>
+<script src="js/gfx.js"></script>
+</body>
+</html>
